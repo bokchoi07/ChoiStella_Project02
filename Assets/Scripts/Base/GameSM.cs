@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameSM : StateMachine
 {
-    // Start is called before the first frame update
+    [SerializeField] InputController input;
+    public InputController Input => input;
+
     void Start()
     {
         ChangeState<SetupGameState>();

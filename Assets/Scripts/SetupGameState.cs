@@ -10,9 +10,9 @@ public class SetupGameState : GameState
     bool activated = false;
     public override void Enter()
     {
+        // setup game with food for players to grab
         Debug.Log("setup: ...entering");
-        Debug.Log("creating " + numberOfPlayers + " players");
-        Debug.Log("creating deck with " + startingCardNumber + " cards.");
+        Debug.Log("creating plate of food?");
         // cant change state while still in enter/exit() transition!
         // dont put ChangeState<> here
 
