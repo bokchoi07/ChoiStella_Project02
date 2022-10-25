@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SetupGameState : GameState
 {
-    [SerializeField] int startingCardNumber = 10;
-    [SerializeField] int numberOfPlayers = 2;
+    //[SerializeField] int startingCardNumber = 10;
+    //[SerializeField] int numberOfPlayers = 2;
 
     bool activated = false;
     public override void Enter()
