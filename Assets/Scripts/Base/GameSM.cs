@@ -7,6 +7,7 @@ public class GameSM : StateMachine
     [SerializeField] InputController input;
     public InputController Input => input;
 
+
     void Start()
     {
         ChangeState<SetupGameState>();
