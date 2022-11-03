@@ -25,6 +25,7 @@ public class PlayerTurnGameState : GameState
     public override void Exit()
     {
         playerTurnTextUI.gameObject.SetActive(false);
+        playerMovement.enabled = false;
 
         // unhook from events
         StateMachine.Input.PressedConfirm -= OnPressedConfirm;
@@ -32,9 +33,16 @@ public class PlayerTurnGameState : GameState
         Debug.Log("player turn: exiting...");
     }
 
+    public override void Tick()
+    {
+        if(GameObject.FindGameObjectWithTag("Food") == null)
+        {
+            StateMachine.ChangeState<WinState>();
+        }
+    }
+
     void OnPressedConfirm()
     {
-        playerMovement.enabled = false;
         StateMachine.ChangeState<EnemyTurnGameState>();
     }
 }

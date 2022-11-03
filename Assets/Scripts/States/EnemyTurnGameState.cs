@@ -22,6 +22,7 @@ public class EnemyTurnGameState : GameState
 
         enemyMovement.SetNewTarget();
         GrabFood();
+        
         //StartCoroutine(EnemyThinkingRoutine(pauseDuration));
     }
 
@@ -48,13 +49,13 @@ public class EnemyTurnGameState : GameState
 
     public override void Tick()
     {
-        base.Tick();
-
+        // it's enemy turn and they pick up last food = player loses
         if(enemyMovement.isThereFood == false)
         {
             StateMachine.ChangeState<LoseState>();
         }
 
+        // there's still food left so go back to player's turn
         if(enemyMovement.GetFoodCount() == numPickup)
         {
             enemyMovement.enabled = false;

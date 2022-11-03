@@ -6,8 +6,7 @@ public class LoseState : GameState
 {
     public override void Enter()
     {
-        base.Enter();
-        Debug.Log("enemy has won! play again or quit?");
+        Debug.Log("enemy has won! play again, menu, or quit?");
         // display smth to play again/main menu/quit
     }
 }
