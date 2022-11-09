@@ -8,7 +8,6 @@ public class PlayerTurnGameState : GameState
     [SerializeField] Text playerTurnTextUI = null;
     [SerializeField] PlayerMovement playerMovement = null;
 
-    int playerTurnCount = 0;
 
     public override void Enter()
     {

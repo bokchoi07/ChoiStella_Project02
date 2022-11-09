@@ -11,8 +11,7 @@ public class SetupGameState : GameState
     public override void Enter()
     {
         // setup game with food for players to grab
-        Debug.Log("setup: ...entering");
-        Debug.Log("creating plate of food?");
+        Debug.Log("entering setup");
         // cant change state while still in enter/exit() transition!
         // dont put ChangeState<> here
 

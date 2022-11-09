@@ -8,21 +8,22 @@ public class EnemyTurnGameState : GameState
     public static event Action EnemyTurnBegan = delegate { };
     public static event Action EnemyTurnEnded = delegate { };
 
-    [SerializeField] float pauseDuration = 1.5f;
+    //[SerializeField] float pauseDuration = 1.5f;
     [SerializeField] EnemyMovement enemyMovement;
 
     private int numPickup;
 
     public override void Enter()
     {
-        EnemyTurnBegan?.Invoke(); // "enemy thinking" text
+        EnemyTurnBegan?.Invoke(); // "enemy turn" text
+        enemyMovement.enabled = true;
 
-        numPickup = UnityEngine.Random.Range(1, 3);
-        Debug.Log("enemy turn; enemy will pick up " + numPickup);
-
-        enemyMovement.SetNewTarget();
-        GrabFood();
         
+        numPickup = UnityEngine.Random.Range(1, 3);
+        
+
+        Debug.Log("enemy turn entering; enemy will pick up " + numPickup);
+
         //StartCoroutine(EnemyThinkingRoutine(pauseDuration));
     }
 
@@ -31,6 +32,7 @@ public class EnemyTurnGameState : GameState
         Debug.Log("enemy turn: exit...");
         enemyMovement.SetFoodCount(0);
         enemyMovement.enabled = false;
+        EnemyTurnEnded?.Invoke();
     }
 
     /*IEnumerator EnemyThinkingRoutine(float pauseDuration)
@@ -42,10 +44,7 @@ public class EnemyTurnGameState : GameState
         // turn over. go back to player
         StateMachine.ChangeState<PlayerTurnGameState>();
     }*/
-    private void GrabFood()
-    {
-        enemyMovement.enabled = true;
-    }
+    
 
     public override void Tick()
     {
@@ -59,7 +58,6 @@ public class EnemyTurnGameState : GameState
         if(enemyMovement.GetFoodCount() == numPickup)
         {
             enemyMovement.enabled = false;
-            EnemyTurnEnded?.Invoke();
             StateMachine.ChangeState<PlayerTurnGameState>();
         }
     }

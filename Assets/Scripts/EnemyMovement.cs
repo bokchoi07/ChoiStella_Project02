@@ -7,7 +7,9 @@ public class EnemyMovement : MonoBehaviour
 {
     private GameObject[] targets;
     private GameObject food;
-    public int foodCount = 0;
+    private int totalFoodCount = 0;
+
+    public int enemyFoodCount = 0;
     public float speed = 1.0f;
     public bool isThereFood = true;
 
@@ -24,13 +26,17 @@ public class EnemyMovement : MonoBehaviour
 
     public void Move()
     {
+        // finding new target
         if (food == null)
         {
-            foodCount++;
+            enemyFoodCount++;
             SetNewTarget();
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, food.transform.position, speed * Time.deltaTime);
+        if (isThereFood)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, food.transform.position, speed * Time.deltaTime);
+        }
     }
 
     public void SetNewTarget()
@@ -38,11 +44,16 @@ public class EnemyMovement : MonoBehaviour
         //targets = GameObject.FindGameObjectsWithTag("Food");
         //Debug.Log("length of targets: " + targets.Length);
         //food = targets[0];
-        food = GameObject.FindGameObjectWithTag("Food");
+        if (GameObject.FindGameObjectWithTag("Food") != null)
+        {
+            food = GameObject.FindGameObjectWithTag("Food");
+        }
+        
+        //totalFoodCount = GameObject.FindGameObjectsWithTag("Food").Length;
+        
 
         if(food == null)
         {
-            Debug.Log("there is no more food, trigger win/lose state");
             isThereFood = false;
         }
     }
@@ -54,12 +65,17 @@ public class EnemyMovement : MonoBehaviour
 
     public void SetFoodCount(int count)
     {
-        foodCount = count;
+        enemyFoodCount = count;
     }
 
     public int GetFoodCount()
     {
-        return foodCount;
+        return enemyFoodCount;
+    }
+
+    public int GetTotalFoodCount()
+    {
+        return totalFoodCount;
     }
 
     /*private GameObject target;
