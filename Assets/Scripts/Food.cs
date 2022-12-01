@@ -7,6 +7,7 @@ public class Food : MonoBehaviour
 {
     [SerializeField] AudioClip eatingSFX;
     [SerializeField] GameObject eatingParticleSystem;
+    [SerializeField] FoodCount _foodCount;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -19,6 +20,7 @@ public class Food : MonoBehaviour
         {
             AudioHelper.PlayClip2D(eatingSFX, .7f);
         }
+        _foodCount.DecreaseTotalFoodCount();
         
         Destroy(gameObject);
     }
