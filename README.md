@@ -1,6 +1,9 @@
-# ChoiStella_Project02
+# Food Scramble
+A turn-based game between the player and enemy AI. Take turns picking up food objects (1 or 2 per turn). Whoever picks up the last piece is the winner.
 
-credits:
+Controls: WASD/arrow keys to move; Enter to end player turn.
+
+Credits:
 2d jap. dishes: https://assetstore.unity.com/packages/2d/textures-materials/food/japanese-dishes-82383#publisher
 3d foods: https://assetstore.unity.com/packages/3d/props/food/free-casual-food-pack-mobile-vr-85884
 font: https://assetstore.unity.com/packages/2d/fonts/fatality-fps-gaming-font-216954
