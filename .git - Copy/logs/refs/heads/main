@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 40d9c5ad8786077f500a48253e6e63cbfc74ef21 Stella Choi <stellachoi120701@gmail.com> 1666367195 -0500	commit (initial): Initial commit
+40d9c5ad8786077f500a48253e6e63cbfc74ef21 2493c2a679847215d4fc17ede4f5a01f6c3e1b5d Stella Choi <stellachoi120701@gmail.com> 1666367228 -0500	commit: setup
+2493c2a679847215d4fc17ede4f5a01f6c3e1b5d 52a6e1faa23367942a6b7d38b2a1b69cac78c8c0 Stella Choi <stellachoi120701@gmail.com> 1666372471 -0500	commit: starting sm setup
+52a6e1faa23367942a6b7d38b2a1b69cac78c8c0 3ab3638d25c46c991c35ac7168b4a82c0fd77d8d Stella Choi <stellachoi120701@gmail.com> 1666382270 -0500	commit: state setup tutorial done
+3ab3638d25c46c991c35ac7168b4a82c0fd77d8d 4e170d966dc4adf29eaef4c00c54282cbfc9e131 Stella Choi <stellachoi120701@gmail.com> 1666736626 -0500	commit: starting main menu
+4e170d966dc4adf29eaef4c00c54282cbfc9e131 c1cf65521a506b313aa6fa5a33f421b6f77a7c7a Stella Choi <stellachoi120701@gmail.com> 1667060483 -0500	commit: enemy movement
+c1cf65521a506b313aa6fa5a33f421b6f77a7c7a 45004271b6dff7273e1af171e623a12908df77b6 Stella Choi <stellachoi120701@gmail.com> 1667514203 -0500	commit: main menu wip
+45004271b6dff7273e1af171e623a12908df77b6 f6ffa3c6cee0e818d7cc6b9dcfade53adc8cd726 Stella Choi <stellachoi120701@gmail.com> 1667752828 -0600	commit: win/lose state menu wip
+f6ffa3c6cee0e818d7cc6b9dcfade53adc8cd726 9a1032fdf8eaa7d94b31faa375c6ee45400e02ef Stella Choi <stellachoi120701@gmail.com> 1667970921 -0600	commit: 2C
+9a1032fdf8eaa7d94b31faa375c6ee45400e02ef d1ff38a062c449ba25ca1029c95440ec011877f8 Stella Choi <stellachoi120701@gmail.com> 1669916214 -0600	commit: adding visuals
+d1ff38a062c449ba25ca1029c95440ec011877f8 f2f01f36a521463d010ee1bc58904207a942bc01 Stella Choi <stellachoi120701@gmail.com> 1670362097 -0600	commit: final commit
